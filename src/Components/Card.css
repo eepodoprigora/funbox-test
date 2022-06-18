@@ -1,0 +1,193 @@
+
+.card {
+    width: 320px;
+    position: relative;
+    clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+}
+
+.card__main {
+    position: relative;
+    padding: 21px 40px;
+    margin-bottom: 14px;
+    height: 480px;
+    background-color: var(--white);
+    overflow: hidden;
+    border-radius: 10px;
+    border: 4px solid var(--blue-16);
+}
+
+.card:not(:last-child) {
+    margin-right: 20px;
+}
+
+.card__main:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 70px;
+    height: 8px;
+    background-color: var(--blue-16);
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    z-index: 2;
+}
+
+.card__minititle {
+    margin-left: 8px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--grey-66);
+}
+
+.card__title {
+    margin-left: 8px;
+    margin-bottom: 3px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.card__stuffing {
+    margin-left: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.card__img {
+    position: absolute;
+    top: 250px;
+    left: -24px;
+    width: 368px;
+    height: 360px;
+}
+
+.card__portionCount,
+.card__gift {
+    padding-right: -8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grey-66);
+}
+
+.card__weight {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    font-size: 42px;
+    line-height: 22px;
+    color: var(--white);
+    border-radius: 100%;
+    background-color: var(--blue-16);
+    z-index: 2;
+}
+
+.card__weight span {
+    display: inline-block;
+    margin-top: 7px;
+    font-size: 24px;
+}
+
+.card__bottom {
+    text-align: center;
+    font-size: 13px;
+    line-height: 15px;
+    color: var(--white);
+}
+
+.card__buy {
+    color: var(--blue-16);
+    text-decoration: underline var(--blue-16) dotted;
+}
+
+.card__bottom span {
+    color: var(--blue-16);
+}
+
+.card__main:hover {
+    cursor: pointer;
+}
+
+.selected .card__main {
+    border-color: var(--pink-e5);
+}
+
+.selected .card__main:before {
+    background-color: var(--pink-e5);
+}
+
+.selected .card__weight {
+    background-color: var(--pink-e5);
+}
+
+.card.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.disabled .card__main {
+    filter: grayscale(100%);
+}
+
+.disabled .card__main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-f2);
+    opacity: 0.6;
+    z-index: 5;
+}
+
+.default .card__bottom-selected {
+    display: none;
+}
+
+.default .card__bottom-disabled {
+    display: none;
+}
+
+.selected .card__bottom-default {
+    display: none;
+}
+
+.selected .card__bottom-disabled {
+    display: none;
+}
+
+.disabled .card__bottom-selected {
+    display: none;
+}
+
+.disabled .card__bottom-default {
+    display: none;
+}
+
+.card__bottom-disabled {
+    color: var(--yellow-ff);
+}
+
+@media screen and (max-width: 1100px) {
+    .card:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 735px) {
+    .card:not(:last-child) {
+        margin-right: 0;
+    }
+}

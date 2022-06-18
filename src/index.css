@@ -1,13 +1,39 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--Trebuchet-font);
+}
+.App {
+  background-image: url("img/background.png");
+}
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  --white: #ffffff;
+  --light-f2: #F2F2F2;
+  --grey-66: #666666;
+  --blue-16: #1698D9;
+  --black: #000000;
+  --pink-e5: #E52E7A;
+  --yellow-ff: #FFFF66;
+
+  --Trebuchet-font: "Trebuchet MS", sans-serif;
+  --Exo-font: 'Exo2.0-Thin', sans-serif;
+
 }
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url('fonts/trebuchetms.woff2') format("woff2"),
+  url('fonts/trebuchetms.woff') format("woff");
+}
+
+@font-face {
+  font-family: "Exo2.0-Thin";
+  src: url('fonts/Exo2.0-Thin.woff2') format("woff2"),
+  url('fonts/Exo2.0-Thin.woff') format("woff");
+}
+
